@@ -1,0 +1,54 @@
+{
+	"$schema": "https://joplinapp.org/schema/settings.json",
+	"locale": "en_US",
+	"api.token": "d53338e458e1afe1cdbd3bf7cc200a22914382d5a5c7b63f624b4a68c08a45ef4225321fc89efbc7de21a3693ace1127ae20f03fe251e67afb0bc437acf1ec38",
+	"markdown.plugin.softbreaks": false,
+	"markdown.plugin.typographer": false,
+	"spellChecker.languages": [
+		"en-US"
+	],
+	"ui.layout": {
+		"key": "root",
+		"children": [
+			{
+				"key": "sideBar",
+				"width": 189,
+				"visible": true
+			},
+			{
+				"key": "noteList",
+				"width": 238,
+				"visible": true
+			},
+			{
+				"key": "editor",
+				"visible": true
+			},
+			{
+				"key": "plugin-view-com.gitlab.BeatLink.joplin-plugin-agenda-panel",
+				"context": {
+					"pluginId": "com.gitlab.BeatLink.joplin-plugin-agenda"
+				},
+				"visible": false
+			}
+		],
+		"visible": true
+	},
+	"noteVisiblePanes": [
+		"editor",
+		"viewer"
+	],
+	"editor.codeView": true,
+	"richTextBannerDismissed": true,
+	"theme": 5,
+	"dateFormat": "MM/DD/YYYY",
+	"notes.sortOrder.reverse": true,
+	"notes.perFieldReverse": {
+		"user_updated_time": true,
+		"user_created_time": true,
+		"title": false,
+		"order": false
+	},
+	"notes.sortOrder.field": "user_created_time",
+	"editor.keyboardMode": "vim"
+}

@@ -871,5 +871,11 @@ client.connect_signal("unmanage", backham)
 -- ensure there is always a selected client during tag switching or logins
 tag.connect_signal("property::selected", backham)
 
-run_once({ "picom -b", "/usr/lib/pam_kwallet_init --no-startup-id", "nm-applet &", "xfce4-power-manager --no-daemon" })
+run_once({
+	"picom -b",
+	"/usr/lib/pam_kwallet_init --no-startup-id",
+	"nm-applet &",
+	"xfce4-power-manager",
+	'xautolock -detectsleep -time 10 -locker "i3lock -c 9c76b5"',
+})
 -- }}}

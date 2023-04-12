@@ -310,7 +310,7 @@ globalkeys = mytable.join(
 
 	-- X screen locker
 	awful.key({ altkey, "Control" }, "l", function()
-		awful.spawn.with_shell("loginctl lock-session")
+		awful.spawn.with_shell("i3lock -c 9c76b5")
 	end, { description = "lock screen", group = "hotkeys" }),
 
 	-- Show help
@@ -590,7 +590,7 @@ globalkeys = mytable.join(
     --]]
 	-- Prompt
 	awful.key({ modkey }, "r", function()
-		awful.spawn("rofi -show drun -theme onedark")
+		awful.spawn("rofi -show drun")
 	end, { description = "rofi", group = "launcher" }),
 
 	awful.key({ modkey }, "x", function()

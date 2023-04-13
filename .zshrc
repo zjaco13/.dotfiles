@@ -110,6 +110,7 @@ alias vi="nvim"
 alias vim="nvim"
 alias config='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
+eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"
 
 # >>> conda initialize >>>

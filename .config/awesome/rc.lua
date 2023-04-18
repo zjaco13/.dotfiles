@@ -103,6 +103,7 @@ local themes = {
 local chosen_theme = themes[7]
 local modkey = "Mod4"
 local altkey = "Mod1"
+local ctlkey = "Control"
 local terminal = "kitty"
 local vi_focus = true -- vi-like client focus https://github.com/lcpz/awesome-copycats/issues/275
 local cycle_prev = false -- cycle with only the previously focused client or all https://github.com/lcpz/awesome-copycats/issues/274
@@ -299,7 +300,7 @@ root.buttons(mytable.join(
 
 globalkeys = mytable.join(
 	-- Destroy all notifications
-	awful.key({ "Control" }, "space", function()
+	awful.key({ ctlkey }, "space", function()
 		naughty.destroy_all_notifications()
 	end, { description = "destroy all notifications", group = "hotkeys" }),
 	-- Take a screenshot
@@ -309,7 +310,7 @@ globalkeys = mytable.join(
 	end, { description = "take a screenshot", group = "hotkeys" }),
 
 	-- X screen locker
-	awful.key({ altkey, "Control" }, "l", function()
+	awful.key({ altkey, ctlkey }, "l", function()
 		awful.spawn.with_shell("i3lock -c 9c76b5")
 	end, { description = "lock screen", group = "hotkeys" }),
 
@@ -408,10 +409,10 @@ globalkeys = mytable.join(
 	end, { description = "toggle wibox", group = "awesome" }),
 
 	-- On-the-fly useless gaps change
-	awful.key({ altkey, "Control" }, "+", function()
+	awful.key({ altkey, ctlkey }, "+", function()
 		lain.util.useless_gaps_resize(1)
 	end, { description = "increment useless gaps", group = "tag" }),
-	awful.key({ altkey, "Control" }, "-", function()
+	awful.key({ altkey, ctlkey }, "-", function()
 		lain.util.useless_gaps_resize(-1)
 	end, { description = "decrement useless gaps", group = "tag" }),
 
@@ -436,7 +437,7 @@ globalkeys = mytable.join(
 	awful.key({ modkey }, "Return", function()
 		awful.spawn(terminal)
 	end, { description = "open a terminal", group = "launcher" }),
-	awful.key({ modkey, "Control" }, "r", awesome.restart, { description = "reload awesome", group = "awesome" }),
+	awful.key({ modkey, ctlkey }, "r", awesome.restart, { description = "reload awesome", group = "awesome" }),
 	awful.key({ modkey, "Shift" }, "q", awesome.quit, { description = "quit awesome", group = "awesome" }),
 
 	awful.key({ modkey, altkey }, "l", function()
@@ -451,10 +452,10 @@ globalkeys = mytable.join(
 	awful.key({ modkey, "Shift" }, "l", function()
 		awful.tag.incnmaster(-1, nil, true)
 	end, { description = "decrease the number of master clients", group = "layout" }),
-	awful.key({ modkey, "Control" }, "h", function()
+	awful.key({ modkey, ctlkey }, "h", function()
 		awful.tag.incncol(1, nil, true)
 	end, { description = "increase the number of columns", group = "layout" }),
-	awful.key({ modkey, "Control" }, "l", function()
+	awful.key({ modkey, ctlkey }, "l", function()
 		awful.tag.incncol(-1, nil, true)
 	end, { description = "decrease the number of columns", group = "layout" }),
 	awful.key({ modkey }, "space", function()
@@ -464,7 +465,7 @@ globalkeys = mytable.join(
 		awful.layout.inc(-1)
 	end, { description = "select previous", group = "layout" }),
 
-	awful.key({ modkey, "Control" }, "n", function()
+	awful.key({ modkey, ctlkey }, "n", function()
 		local c = awful.client.restore()
 		-- Focus restored client
 		if c then
@@ -515,17 +516,17 @@ globalkeys = mytable.join(
 		os.execute(string.format("amixer -q set %s toggle", beautiful.volume.togglechannel or beautiful.volume.channel))
 		beautiful.volume.update()
 	end, { description = "toggle mute", group = "hotkeys" }),
-	awful.key({ altkey, "Control" }, "m", function()
+	awful.key({ altkey, ctlkey }, "m", function()
 		os.execute(string.format("amixer -q set %s 100%%", beautiful.volume.channel))
 		beautiful.volume.update()
 	end, { description = "volume 100%", group = "hotkeys" }),
-	awful.key({ altkey, "Control" }, "0", function()
+	awful.key({ altkey, ctlkey }, "0", function()
 		os.execute(string.format("amixer -q set %s 0%%", beautiful.volume.channel))
 		beautiful.volume.update()
 	end, { description = "volume 0%", group = "hotkeys" }),
 
 	-- MPD control
-	awful.key({ altkey, "Control" }, "Up", function()
+	awful.key({ altkey, ctlkey }, "Up", function()
 		os.execute("mpc toggle")
 		beautiful.mpd.update()
 	end, { description = "mpc toggle", group = "widgets" }),
@@ -618,12 +619,12 @@ clientkeys = mytable.join(
 		c:kill()
 	end, { description = "close", group = "client" }),
 	awful.key(
-		{ modkey, "Control" },
+		{ modkey, ctlkey },
 		"space",
 		awful.client.floating.toggle,
 		{ description = "toggle floating", group = "client" }
 	),
-	awful.key({ modkey, "Control" }, "Return", function(c)
+	awful.key({ modkey, ctlkey }, "Return", function(c)
 		c:swap(awful.client.getmaster())
 	end, { description = "move to master", group = "client" }),
 	awful.key({ modkey }, "o", function(c)
@@ -641,7 +642,7 @@ clientkeys = mytable.join(
 		c.maximized = not c.maximized
 		c:raise()
 	end, { description = "(un)maximize", group = "client" }),
-	awful.key({ modkey, "Control" }, "m", function(c)
+	awful.key({ modkey, ctlkey }, "m", function(c)
 		c.maximized_vertical = not c.maximized_vertical
 		c:raise()
 	end, { description = "(un)maximize vertically", group = "client" }),
@@ -666,7 +667,7 @@ for i = 1, 9 do
 			end
 		end, { description = "view tag #" .. i, group = "tag" }),
 		-- Toggle tag display.
-		awful.key({ modkey, "Control" }, "#" .. i + 9, function()
+		awful.key({ modkey, ctlkey }, "#" .. i + 9, function()
 			local screen = awful.screen.focused()
 			local tag = screen.tags[i]
 			if tag then
@@ -683,7 +684,7 @@ for i = 1, 9 do
 			end
 		end, { description = "move focused client to tag #" .. i, group = "tag" }),
 		-- Toggle tag on focused client.
-		awful.key({ modkey, "Control", "Shift" }, "#" .. i + 9, function()
+		awful.key({ modkey, ctlkey, "Shift" }, "#" .. i + 9, function()
 			if client.focus then
 				local tag = client.focus.screen.tags[i]
 				if tag then

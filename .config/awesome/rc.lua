@@ -877,6 +877,6 @@ run_once({
 	"/usr/lib/pam_kwallet_init --no-startup-id",
 	"nm-applet &",
 	"xfce4-power-manager",
-	'xautolock -detectsleep -time 10 -locker "i3lock -c 9c76b5"',
+	'xautolock -corners 0+0- -cornerdelay 5 -cornerredelay 10 -detectsleep -time 10 -locker "i3lock -c 9c76b5"',
 })
 -- }}}

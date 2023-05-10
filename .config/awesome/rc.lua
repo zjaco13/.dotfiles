@@ -305,13 +305,13 @@ globalkeys = mytable.join(
 	end, { description = "destroy all notifications", group = "hotkeys" }),
 	-- Take a screenshot
 	-- https://github.com/lcpz/dots/blob/master/bin/screenshot
-	awful.key({ altkey }, "p", function()
-		os.execute("screenshot")
+	awful.key({}, "Print", function()
+		awful.spawn("spectacle")
 	end, { description = "take a screenshot", group = "hotkeys" }),
 
 	-- X screen locker
 	awful.key({ altkey, ctlkey }, "l", function()
-		awful.spawn.with_shell("i3lock -c 9c76b5")
+		awful.spawn.with_shell("loginctl lock-session $XDG_SESSION_ID")
 	end, { description = "lock screen", group = "hotkeys" }),
 
 	-- Show help
@@ -329,11 +329,17 @@ globalkeys = mytable.join(
 	-- Non-empty tag browsing
 	awful.key({ altkey }, "Left", function()
 		lain.util.tag_view_nonempty(-1)
-	end, { description = "view  previous nonempty", group = "tag" }),
+	end, { description = "view previous nonempty", group = "tag" }),
 	awful.key({ altkey }, "Right", function()
 		lain.util.tag_view_nonempty(1)
-	end, { description = "view  previous nonempty", group = "tag" }),
-
+	end, { description = "view next nonempty", group = "tag" }),
+	-- Non-empty tag browsing ALT+ENTER (ALT+SHIFT+ENTER)
+	awful.key({ altkey, "Shift" }, "Return", function()
+		lain.util.tag_view_nonempty(-1)
+	end, { description = "view previous nonempty", group = "tag" }),
+	awful.key({ altkey }, "Return", function()
+		lain.util.tag_view_nonempty(1)
+	end, { description = "view next nonempty", group = "tag" }),
 	-- Default client focus
 	awful.key({ altkey }, "j", function()
 		awful.client.focus.byidx(1)
@@ -474,7 +480,7 @@ globalkeys = mytable.join(
 	end, { description = "restore minimized", group = "client" }),
 
 	-- Dropdown application
-	awful.key({ modkey }, "F12", function()
+	awful.key({}, "F12", function()
 		awful.screen.focused().quake:toggle()
 	end, { description = "dropdown application", group = "launcher" }),
 
@@ -497,35 +503,43 @@ globalkeys = mytable.join(
 
 	-- Screen brightness
 	awful.key({}, "XF86MonBrightnessUp", function()
-		os.execute("brightnessctl s +10%")
+		awful.spawn.with_shell("brightnessctl s +10%")
 	end, { description = "+10%", group = "hotkeys" }),
 	awful.key({}, "XF86MonBrightnessDown", function()
-		os.execute("brightnessctl s 10%-")
+		awful.spawn.with_shell("brightnessctl s 10%-")
 	end, { description = "-10%", group = "hotkeys" }),
 
 	-- ALSA volume control
 	awful.key({}, "XF86AudioRaiseVolume", function()
-		os.execute(string.format("amixer -q set %s 1%%+", beautiful.volume.channel))
-		beautiful.volume.update()
+		awful.spawn.easy_async_with_shell(string.format("amixer -q set %s 1%%+", beautiful.volume.channel), function()
+			beautiful.volume.update()
+		end)
 	end, { description = "volume up", group = "hotkeys" }),
-	awful.key({}, "#122", function()
-		os.execute(string.format("amixer -q set %s 1%%-", beautiful.volume.channel))
-		beautiful.volume.update()
+	awful.key({}, "XF86AudioLowerVolume", function()
+		awful.spawn.easy_async_with_shell(string.format("amixer -q set %s 1%%-", beautiful.volume.channel), function()
+			beautiful.volume.update()
+		end)
 	end, { description = "volume down", group = "hotkeys" }),
 	awful.key({}, "XF86AudioMute", function()
-		os.execute(string.format("amixer -q set %s toggle", beautiful.volume.togglechannel or beautiful.volume.channel))
-		beautiful.volume.update()
+		awful.spawn.easy_async_with_shell(
+			string.format("amixer -q set %s toggle", beautiful.volume.togglechannel or beautiful.volume.channel),
+			function()
+				beautiful.volume.update()
+			end
+		)
 	end, { description = "toggle mute", group = "hotkeys" }),
-	awful.key({ altkey, ctlkey }, "m", function()
-		os.execute(string.format("amixer -q set %s 100%%", beautiful.volume.channel))
-		beautiful.volume.update()
+	awful.key({ "Shift" }, "XF86AudioRaiseVolume", function()
+		awful.spawn.easy_async_with_shell(string.format("amixer -q set %s 100%%", beautiful.volume.channel), function()
+			beautiful.volume.update()
+		end)
 	end, { description = "volume 100%", group = "hotkeys" }),
-	awful.key({ altkey, ctlkey }, "0", function()
-		os.execute(string.format("amixer -q set %s 0%%", beautiful.volume.channel))
-		beautiful.volume.update()
+	awful.key({ "Shift" }, "XF86AudioLowerVolume", function()
+		awful.spawn.easy_async_with_shell(string.format("amixer -q set %s 0%%", beautiful.volume.channel), function()
+			beautiful.volume.update()
+		end)
 	end, { description = "volume 0%", group = "hotkeys" }),
 
-	-- MPD control
+	--[[ MPD control
 	awful.key({ altkey, ctlkey }, "Up", function()
 		os.execute("mpc toggle")
 		beautiful.mpd.update()
@@ -553,6 +567,34 @@ globalkeys = mytable.join(
 		end
 		naughty.notify(common)
 	end, { description = "mpc on/off", group = "widgets" }),
+]]
+	-- Playerctl control
+	awful.key({}, "XF86AudioPlay", function()
+		awful.spawn.easy_async_with_shell("playerctl play-pause", function()
+			beautiful.player.update()
+		end)
+	end, { description = "playerctl toggle", group = "widgets" }),
+	awful.key({}, "XF86AudioPrev", function()
+		awful.spawn.easy_async_with_shell("playerctl previous", function()
+			beautiful.player.update()
+		end)
+	end, { description = "playerctl prev", group = "widgets" }),
+	awful.key({}, "XF86AudioNext", function()
+		awful.spawn.easy_async_with_shell("playerctl next", function()
+			beautiful.player.update()
+		end)
+	end, { description = "playerctl next", group = "widgets" }),
+	awful.key({ altkey }, "0", function()
+		local common = { text = "playerctl widget ", position = "top_middle", timeout = 2 }
+		if beautiful.player.timer.started then
+			beautiful.player.timer:stop()
+			common.text = common.text .. lain.util.markup.bold("OFF")
+		else
+			beautiful.player.timer:start()
+			common.text = common.text .. lain.util.markup.bold("ON")
+		end
+		naughty.notify(common)
+	end, { description = "player on/off", group = "widgets" }),
 
 	-- Copy primary to clipboard (terminals to gtk)
 	awful.key({ modkey }, "c", function()
@@ -568,6 +610,10 @@ globalkeys = mytable.join(
 		awful.spawn(browser)
 	end, { description = "run browser", group = "launcher" }),
 
+	awful.key({ modkey }, "t", function()
+		awful.spawn(terminal .. " -e taskwarrior-tui")
+	end, { description = "run taskwarrior-tui", group = "launcher" }),
+
 	-- Default
 	--[[ Menubar
     awful.key({ modkey }, "p", function() menubar.show() end,
@@ -582,19 +628,33 @@ globalkeys = mytable.join(
     --]]
 	-- alternatively use rofi, a dmenu-like application with more features
 	-- check https://github.com/DaveDavenport/rofi for more details
-	--[[ rofi
-    awful.key({ modkey }, "x", function ()
-            os.execute(string.format("rofi -show %s -theme %s",
-            'run', 'dmenu'))
-        end,
-        {description = "show rofi", group = "launcher"}),
-    --]]
+	-- rofi
+	awful.key({ modkey }, "x", function()
+		awful.spawn(string.format("rofi -show %s -theme %s", "run", "dmenu"))
+	end, { description = "show rofi", group = "launcher" }),
+	--]]
 	-- Prompt
 	awful.key({ modkey }, "r", function()
-		awful.spawn("rofi -show drun")
-	end, { description = "rofi", group = "launcher" }),
+		local grabber
+		grabber = awful.keygrabber.run(function(_, key, event)
+			if event == "release" then
+				return
+			end
 
-	awful.key({ modkey }, "x", function()
+			if key == "d" then
+				awful.spawn("rofi -show drun")
+			elseif key == "c" then
+				awful.spawn("rofi -show calc -modi calc -no-show-match -no-sort -terse")
+			elseif key == "w" then
+				awful.spawn.with_shell("~/.config/rofi/rofi-network-manager/rofi-network-manager.sh")
+			elseif key == "p" then
+				awful.spawn("rofi -show powermenu -modi powermenu:~/.config/rofi/rofi-power-menu/rofi-power-menu.sh")
+			end
+			awful.keygrabber.stop(grabber)
+		end)
+	end, { description = "WITH OTHER KEY rofi", group = "launcher" }),
+
+	--[[awful.key({ modkey }, "x", function()
 		awful.prompt.run({
 			prompt = "Run Lua code: ",
 			textbox = awful.screen.focused().mypromptbox.widget,
@@ -877,6 +937,9 @@ run_once({
 	"/usr/lib/pam_kwallet_init --no-startup-id",
 	"nm-applet &",
 	"xfce4-power-manager",
-	'xautolock -corners 0+0- -cornerdelay 5 -cornerredelay 10 -detectsleep -time 10 -locker "i3lock -c 9c76b5"',
+	'xautolock -corners 0+0- -cornerdelay 5 -cornerredelay 10 -detectsleep -time 10 -locker "loginctl lock-session $XDG_SESSION_ID"',
+	"xss-lock -- i3lock -c 9c76b5",
+	"playerctld daemon",
+	"conky",
 })
 -- }}}

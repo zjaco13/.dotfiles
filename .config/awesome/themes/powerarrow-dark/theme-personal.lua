@@ -14,9 +14,12 @@ local dpi = require("beautiful.xresources").apply_dpi
 local os = os
 local my_table = awful.util.table or gears.table -- 4.{0,1} compatibility
 
+math.randomseed(os.time())
+local num = math.random(4)
+
 local theme = {}
 theme.dir = os.getenv("HOME") .. "/.config/awesome/themes/powerarrow-dark"
-theme.wallpaper = theme.dir .. "/wall3.jpg"
+theme.wallpaper = theme.dir .. "/wall" .. num .. ".png"
 theme.font = "Terminus 9"
 theme.fg_normal = "#DDDDFF"
 theme.fg_focus = "#EA6F81"
@@ -58,6 +61,7 @@ theme.widget_cpu = theme.dir .. "/icons/cpu.png"
 theme.widget_temp = theme.dir .. "/icons/temp.png"
 theme.widget_net = theme.dir .. "/icons/net.png"
 theme.widget_hdd = theme.dir .. "/icons/hdd.png"
+theme.widget_task = theme.dir .. "/icons/task.png"
 theme.widget_music = theme.dir .. "/icons/note.png"
 theme.widget_music_on = theme.dir .. "/icons/note_on.png"
 theme.widget_vol = theme.dir .. "/icons/vol.png"
@@ -130,7 +134,48 @@ theme.mail = lain.widget.imap({
 })
 --]]
 
--- MPD
+-- Playerctl
+local musicon = wibox.widget.imagebox(theme.widget_music)
+musicon:buttons(my_table.join(
+	awful.button({ "Mod4" }, 1, function()
+		awful.spawn(string.format("%s -e spt", awful.util.terminal))
+	end),
+	awful.button({}, 1, function()
+		awful.spawn.easy_async_with_shell("playerctl play-pause", function()
+			theme.player.update()
+		end)
+	end),
+	awful.button({}, 2, function()
+		awful.spawn.easy_async_with_shell("playerctl previous", function()
+			theme.player.update()
+		end)
+	end),
+	awful.button({}, 3, function()
+		awful.spawn.easy_async_with_shell("playerctl next", function()
+			theme.player.update()
+		end)
+	end)
+))
+theme.player = lain.widget.contrib.playerctl({
+	settings = function()
+		if player_now.state == "Playing" then
+			artist = " " .. player_now.artist .. " "
+			title = player_now.title .. " "
+			musicon:set_image(theme.widget_music_on)
+		elseif player_now.state == "Paused" then
+			artist = " player "
+			title = "paused "
+		else
+			artist = ""
+			title = ""
+			musicon:set_image(theme.widget_music)
+		end
+
+		widget:set_markup(markup.font(theme.font, markup("#EA6F81", artist) .. title))
+	end,
+})
+
+--[[ MPD
 local musicplr = awful.util.terminal .. " -title Music -e ncmpcpp"
 local mpdicon = wibox.widget.imagebox(theme.widget_music)
 mpdicon:buttons(my_table.join(
@@ -168,7 +213,7 @@ theme.mpd = lain.widget.mpd({
 		widget:set_markup(markup.font(theme.font, markup("#EA6F81", artist) .. title))
 	end,
 })
-
+]]
 -- MEM
 local memicon = wibox.widget.imagebox(theme.widget_mem)
 local mem = lain.widget.mem({
@@ -195,12 +240,12 @@ local temp = lain.widget.temp({
 
 -- / fs
 local fsicon = wibox.widget.imagebox(theme.widget_hdd)
---[[ commented because it needs Gio/Glib >= 2.54
+-- commented because it needs Gio/Glib >= 2.54
 theme.fs = lain.widget.fs({
-    notification_preset = { fg = theme.fg_normal, bg = theme.bg_normal, font = "Terminus 10" },
-    settings = function()
-        widget:set_markup(markup.font(theme.font, " " .. fs_now["/"].percentage .. "% "))
-    end
+	notification_preset = { fg = theme.fg_normal, bg = theme.bg_normal, font = "Terminus 10" },
+	settings = function()
+		widget:set_markup(markup.font(theme.font, " " .. fs_now["/"].percentage .. "% "))
+	end,
 })
 --]]
 
@@ -268,6 +313,18 @@ local net = lain.widget.net({
 		)
 	end,
 })
+
+--Task
+local taskicon = wibox.widget.imagebox(theme.widget_task)
+lain.widget.contrib.task.attach(taskicon, {})
+taskicon:buttons(
+	awful.util.table.join(
+		awful.button({}, 1, lain.widget.contrib.task.prompt),
+		awful.button({ "Mod4" }, 1, function()
+			awful.spawn(awful.util.terminal .. " -e taskwarrior-tui")
+		end)
+	)
+)
 
 -- Separators
 local spr = wibox.widget.textbox(" ")
@@ -337,14 +394,13 @@ function theme.at_screen_connect(s)
 			keyboardlayout,
 			spr,
 			arrl_ld,
-			wibox.container.background(mpdicon, theme.bg_focus),
-			wibox.container.background(theme.mpd.widget, theme.bg_focus),
+			wibox.container.background(musicon, theme.bg_focus),
+			wibox.container.background(theme.player.widget, theme.bg_focus),
 			arrl_dl,
 			volicon,
 			theme.volume.widget,
 			arrl_ld,
-			wibox.container.background(mailicon, theme.bg_focus),
-			--wibox.container.background(theme.mail.widget, theme.bg_focus),
+			wibox.container.background(taskicon, theme.bg_focus),
 			arrl_dl,
 			memicon,
 			mem.widget,
@@ -356,7 +412,7 @@ function theme.at_screen_connect(s)
 			temp.widget,
 			arrl_ld,
 			wibox.container.background(fsicon, theme.bg_focus),
-			--wibox.container.background(theme.fs.widget, theme.bg_focus),
+			wibox.container.background(theme.fs.widget, theme.bg_focus),
 			arrl_dl,
 			baticon,
 			bat.widget,

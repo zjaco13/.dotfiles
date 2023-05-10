@@ -1,6 +1,5 @@
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$HOME/.local/bin:$PATH
-export PATH="/opt/miniconda3/bin:$PATH"
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -106,9 +105,12 @@ export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 # 
 # }
 alias cat="bat -n"
-alias vi="nvim"
-alias vim="nvim"
+alias v="nvim"
 alias config='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+if [ -x "$(command -v tmux)" ] && [ -n "${DISPLAY}" ] && [ -z "${TMUX}" ]; then
+    tmux >/dev/null 2>&1
+fi
+bindkey -s '^t' 'tmux a^M'
 
 eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"

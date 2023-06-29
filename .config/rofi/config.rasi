@@ -148,4 +148,4 @@ configuration {
       directories-first: true;
       sorting-method:    "name";
   }
-}@theme "tokyonight"
+}/*@theme "tokyonight"*/

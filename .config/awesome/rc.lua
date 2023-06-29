@@ -111,7 +111,7 @@ local editor = "nvim"
 local browser = "firefox"
 
 awful.util.terminal = terminal
-awful.util.tagnames = { "dev", "www", "[sys]", "note", "doc", "media", "[*]" }
+awful.util.tagnames = { "dev", "www", "[sys]", "note", "doc", "media", "game", "[*]" }
 awful.layout.layouts = {
 	awful.layout.suit.tile,
 	awful.layout.suit.floating,
@@ -504,10 +504,10 @@ globalkeys = mytable.join(
 	-- Screen brightness
 	awful.key({}, "XF86MonBrightnessUp", function()
 		awful.spawn.with_shell("brightnessctl s +10%")
-	end, { description = "+10%", group = "hotkeys" }),
+	end, { description = "increase brightness", group = "hotkeys" }),
 	awful.key({}, "XF86MonBrightnessDown", function()
 		awful.spawn.with_shell("brightnessctl s 10%-")
-	end, { description = "-10%", group = "hotkeys" }),
+	end, { description = "decrease brightness", group = "hotkeys" }),
 
 	-- ALSA volume control
 	awful.key({}, "XF86AudioRaiseVolume", function()
@@ -631,7 +631,15 @@ globalkeys = mytable.join(
 	-- rofi
 	awful.key({ modkey }, "x", function()
 		awful.spawn(string.format("rofi -show %s -theme %s", "run", "dmenu"))
-	end, { description = "show rofi", group = "launcher" }),
+	end, { description = "rofi run command", group = "launcher" }),
+
+	awful.key({ modkey }, "space", function()
+		awful.spawn("rofi -show window -theme tokyonight")
+	end, { description = "rofi window switcher", group = "client" }),
+
+	awful.key({ modkey }, "n", function()
+		awful.spawn("rofi -show drun -theme tokyonight")
+	end, { description = "rofi launcher", group = "launcher" }),
 	--]]
 	-- Prompt
 	awful.key({ modkey }, "r", function()
@@ -640,15 +648,14 @@ globalkeys = mytable.join(
 			if event == "release" then
 				return
 			end
-
-			if key == "d" then
-				awful.spawn("rofi -show drun")
-			elseif key == "c" then
-				awful.spawn("rofi -show calc -modi calc -no-show-match -no-sort -terse")
+			if key == "c" then
+				awful.spawn("rofi -show calc -modi calc -no-show-match -no-sort -terse -theme slate")
 			elseif key == "w" then
 				awful.spawn.with_shell("~/.config/rofi/rofi-network-manager/rofi-network-manager.sh")
 			elseif key == "p" then
-				awful.spawn("rofi -show powermenu -modi powermenu:~/.config/rofi/rofi-power-menu/rofi-power-menu.sh")
+				awful.spawn(
+					"rofi -show powermenu -modi powermenu:~/.config/rofi/rofi-power-menu/rofi-power-menu.sh -theme tokyonight"
+				)
 			end
 			awful.keygrabber.stop(grabber)
 		end)
@@ -937,8 +944,8 @@ run_once({
 	"/usr/lib/pam_kwallet_init --no-startup-id",
 	"nm-applet &",
 	"xfce4-power-manager",
-	'xautolock -corners 0+0- -cornerdelay 5 -cornerredelay 10 -detectsleep -time 10 -locker "loginctl lock-session $XDG_SESSION_ID"',
-	"xss-lock -- i3lock -c 9c76b5",
+	--'xautolock -corners 0+0- -cornerdelay 5 -cornerredelay 10 -time 10 -locker "loginctl lock-session $XDG_SESSION_ID"',
+	--"xss-lock -- i3lock -c 9c76b5 &",
 	"playerctld daemon",
 	"conky",
 })

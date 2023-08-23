@@ -637,7 +637,7 @@ globalkeys = mytable.join(
 		awful.spawn("rofi -show window -theme tokyonight")
 	end, { description = "rofi window switcher", group = "client" }),
 
-	awful.key({ modkey }, "n", function()
+	awful.key({ modkey }, "p", function()
 		awful.spawn("rofi -show drun -theme tokyonight")
 	end, { description = "rofi launcher", group = "launcher" }),
 	--]]

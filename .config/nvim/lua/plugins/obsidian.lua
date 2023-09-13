@@ -1,7 +1,6 @@
 return {
   {
     "epwalsh/obsidian.nvim",
-    import = "obsidian.mapping",
     lazy = true,
     -- If you want to use the home shortcut '~' here you need to call 'vim.fn.expand':
     event = { "BufReadPre " .. vim.fn.expand("~") .. "/Documents/Fall-2023-notes/**.md" },

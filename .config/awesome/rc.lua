@@ -323,8 +323,8 @@ globalkeys = mytable.join(
 	awful.key({ modkey }, "Escape", awful.tag.history.restore, { description = "go back", group = "tag" }),
 
 	-- Tag browsing ALT+TAB (ALT+SHIFT+TAB)
-	awful.key({ altkey }, "Tab", awful.tag.viewnext, { description = "view next", group = "tag" }),
-	awful.key({ altkey, "Shift" }, "Tab", awful.tag.viewprev, { description = "view previous", group = "tag" }),
+	-- awful.key({ altkey }, "Tab", awful.tag.viewnext, { description = "view next", group = "tag" }),
+	-- awful.key({ altkey, "Shift" }, "Tab", awful.tag.viewprev, { description = "view previous", group = "tag" }),
 
 	-- Non-empty tag browsing
 	awful.key({ altkey }, "Left", function()
@@ -333,11 +333,11 @@ globalkeys = mytable.join(
 	awful.key({ altkey }, "Right", function()
 		lain.util.tag_view_nonempty(1)
 	end, { description = "view next nonempty", group = "tag" }),
-	-- Non-empty tag browsing ALT+ENTER (ALT+SHIFT+ENTER)
-	awful.key({ altkey, "Shift" }, "Return", function()
+	-- Non-empty tag browsing ALT+TAB (ALT+SHIFT+TAB)
+	awful.key({ altkey, "Shift" }, "Tab", function()
 		lain.util.tag_view_nonempty(-1)
 	end, { description = "view previous nonempty", group = "tag" }),
-	awful.key({ altkey }, "Return", function()
+	awful.key({ altkey }, "Tab", function()
 		lain.util.tag_view_nonempty(1)
 	end, { description = "view next nonempty", group = "tag" }),
 	-- Default client focus

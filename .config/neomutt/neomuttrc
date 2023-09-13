@@ -1,0 +1,13 @@
+set sidebar_visible
+set sidebar_format = "%B%<F? [%F]>%* %<N?%N/>%S"
+set mail_check_stats
+bind index,pager \CP sidebar-prev
+# Ctrl-P – Previous Mailbox
+bind index,pager \CN sidebar-next
+# Ctrl-N – Next Mailbox
+bind index,pager \CO sidebar-open
+# Ctrl-O – Open Highlighted Mailbox
+set sidebar_width = 25
+# Plenty of space
+set sidebar_divider_char = '│'
+# Pretty line-drawing character

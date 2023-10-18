@@ -614,6 +614,10 @@ globalkeys = mytable.join(
 		awful.spawn(terminal .. " -e taskwarrior-tui")
 	end, { description = "run taskwarrior-tui", group = "launcher" }),
 
+	awful.key({ modkey }, "e", function()
+		awful.spawn(terminal .. " -e yazi")
+	end, { description = "run yazi", group = "launcher" }),
+
 	-- Default
 	--[[ Menubar
     awful.key({ modkey }, "p", function() menubar.show() end,
@@ -943,9 +947,8 @@ run_once({
 	"picom -b",
 	"/usr/lib/pam_kwallet_init --no-startup-id",
 	"nm-applet &",
-	"xfce4-power-manager",
-	--'xautolock -corners 0+0- -cornerdelay 5 -cornerredelay 10 -time 10 -locker "loginctl lock-session $XDG_SESSION_ID"',
-	--"xss-lock -- i3lock -c 9c76b5 &",
+	'xautolock -corners 0+0- -cornerdelay 5 -cornerredelay 10 -time 10 -locker "loginctl lock-session $XDG_SESSION_ID"',
+	"xss-lock -- i3lock -c 9c76b5 &",
 	"playerctld daemon",
 	"conky",
 })

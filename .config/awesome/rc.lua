@@ -627,7 +627,7 @@ globalkeys = mytable.join(
 	-- check https://github.com/DaveDavenport/rofi for more details
 	-- rofi
 	awful.key({ modkey }, "x", function()
-		awful.spawn(string.format("rofi -dmenu"))
+		awful.spawn(string.format("rofi -show run -theme dmenu"))
 	end, { description = "rofi run command", group = "launcher" }),
 
 	awful.key({ modkey }, "space", function()

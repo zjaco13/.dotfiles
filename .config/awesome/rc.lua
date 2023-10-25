@@ -318,56 +318,45 @@ globalkeys = mytable.join(
 	awful.key({ modkey }, "s", hotkeys_popup.show_help, { description = "show help", group = "awesome" }),
 
 	-- Tag browsing
-	awful.key({ modkey }, "Left", awful.tag.viewprev, { description = "view previous", group = "tag" }),
-	awful.key({ modkey }, "Right", awful.tag.viewnext, { description = "view next", group = "tag" }),
+	awful.key({ modkey }, "h", awful.tag.viewprev, { description = "view previous", group = "tag" }),
+	awful.key({ modkey }, "l", awful.tag.viewnext, { description = "view next", group = "tag" }),
 	awful.key({ modkey }, "Escape", awful.tag.history.restore, { description = "go back", group = "tag" }),
 
-	-- Tag browsing ALT+TAB (ALT+SHIFT+TAB)
-	-- awful.key({ altkey }, "Tab", awful.tag.viewnext, { description = "view next", group = "tag" }),
-	-- awful.key({ altkey, "Shift" }, "Tab", awful.tag.viewprev, { description = "view previous", group = "tag" }),
-
-	-- Non-empty tag browsing
-	awful.key({ altkey }, "Left", function()
+	-- Non-empty tag browsing MOD+TAB (MOD+SHIFT+TAB)
+	awful.key({ modkey, "Shift" }, "Tab", function()
 		lain.util.tag_view_nonempty(-1)
 	end, { description = "view previous nonempty", group = "tag" }),
-	awful.key({ altkey }, "Right", function()
-		lain.util.tag_view_nonempty(1)
-	end, { description = "view next nonempty", group = "tag" }),
-	-- Non-empty tag browsing ALT+TAB (ALT+SHIFT+TAB)
-	awful.key({ altkey, "Shift" }, "Tab", function()
-		lain.util.tag_view_nonempty(-1)
-	end, { description = "view previous nonempty", group = "tag" }),
-	awful.key({ altkey }, "Tab", function()
+	awful.key({ modkey }, "Tab", function()
 		lain.util.tag_view_nonempty(1)
 	end, { description = "view next nonempty", group = "tag" }),
 	-- Default client focus
-	awful.key({ altkey }, "j", function()
+	awful.key({ modkey }, "j", function()
 		awful.client.focus.byidx(1)
 	end, { description = "focus next by index", group = "client" }),
-	awful.key({ altkey }, "k", function()
+	awful.key({ modkey }, "k", function()
 		awful.client.focus.byidx(-1)
 	end, { description = "focus previous by index", group = "client" }),
 
 	-- By-direction client focus
-	awful.key({ modkey }, "j", function()
+	awful.key({ altkey }, "j", function()
 		awful.client.focus.global_bydirection("down")
 		if client.focus then
 			client.focus:raise()
 		end
 	end, { description = "focus down", group = "client" }),
-	awful.key({ modkey }, "k", function()
+	awful.key({ altkey }, "k", function()
 		awful.client.focus.global_bydirection("up")
 		if client.focus then
 			client.focus:raise()
 		end
 	end, { description = "focus up", group = "client" }),
-	awful.key({ modkey }, "h", function()
+	awful.key({ altkey }, "h", function()
 		awful.client.focus.global_bydirection("left")
 		if client.focus then
 			client.focus:raise()
 		end
 	end, { description = "focus left", group = "client" }),
-	awful.key({ modkey }, "l", function()
+	awful.key({ altkey }, "l", function()
 		awful.client.focus.global_bydirection("right")
 		if client.focus then
 			client.focus:raise()
@@ -380,10 +369,10 @@ globalkeys = mytable.join(
 	end, { description = "show main menu", group = "awesome" }),
 
 	-- Layout manipulation
-	awful.key({ modkey, "Shift" }, "j", function()
+	awful.key({ altkey, "Shift" }, "j", function()
 		awful.client.swap.byidx(1)
 	end, { description = "swap with next client by index", group = "client" }),
-	awful.key({ modkey, "Shift" }, "k", function()
+	awful.key({ altkey, "Shift" }, "k", function()
 		awful.client.swap.byidx(-1)
 	end, { description = "swap with previous client by index", group = "client" }),
 	awful.key({ modkey }, ".", function()
@@ -392,8 +381,8 @@ globalkeys = mytable.join(
 	awful.key({ modkey }, ",", function()
 		awful.screen.focus_relative(-1)
 	end, { description = "focus the previous screen", group = "screen" }),
-	awful.key({ modkey }, "u", awful.client.urgent.jumpto, { description = "jump to urgent client", group = "client" }),
-	awful.key({ modkey }, "Tab", function()
+	awful.key({ altkey }, "u", awful.client.urgent.jumpto, { description = "jump to urgent client", group = "client" }),
+	awful.key({ altkey }, "Tab", function()
 		if cycle_prev then
 			awful.client.focus.history.previous()
 		else
@@ -490,7 +479,7 @@ globalkeys = mytable.join(
 			beautiful.cal.show(7)
 		end
 	end, { description = "show calendar", group = "widgets" }),
-	awful.key({ altkey }, "h", function()
+	awful.key({ altkey }, "f", function()
 		if beautiful.fs then
 			beautiful.fs.show(7)
 		end
@@ -608,15 +597,19 @@ globalkeys = mytable.join(
 	-- User programs
 	awful.key({ modkey }, "b", function()
 		awful.spawn(browser)
-	end, { description = "run browser", group = "launcher" }),
+	end, { description = "launch browser", group = "launcher" }),
 
 	awful.key({ modkey }, "t", function()
 		awful.spawn(terminal .. " -e taskwarrior-tui")
-	end, { description = "run taskwarrior-tui", group = "launcher" }),
+	end, { description = "launch task", group = "launcher" }),
 
 	awful.key({ modkey }, "e", function()
 		awful.spawn(terminal .. " -e yazi")
-	end, { description = "run yazi", group = "launcher" }),
+	end, { description = "launch filemanager", group = "launcher" }),
+
+	awful.key({ modkey }, "a", function()
+		awful.spawn(terminal .. " -e aerc")
+	end, { description = "launch mail", group = "launcher" }),
 
 	-- Default
 	--[[ Menubar
@@ -634,7 +627,7 @@ globalkeys = mytable.join(
 	-- check https://github.com/DaveDavenport/rofi for more details
 	-- rofi
 	awful.key({ modkey }, "x", function()
-		awful.spawn(string.format("rofi -show %s -theme %s", "run", "dmenu"))
+		awful.spawn(string.format("rofi -dmenu"))
 	end, { description = "rofi run command", group = "launcher" }),
 
 	awful.key({ modkey }, "space", function()

@@ -12,8 +12,8 @@ export JUPYTER_CONFIG_DIR=${JUPYTER_CONFIG_DIR:-$XDG_CONFIG_HOME/jupyter}
 export KERAS_HOME=${KERAS_HOME:-$XDG_STATE_HOME/keras}
 export RUSTUP_HOME=${RUSTUP_HOME:-$XDG_DATA_HOME/rustup}
 export HISTFILE=${HISTFILE:-$XDG_DATA_HOME/zsh/history}
-export EDITOR="nvim"
 export SSH_AUTH_SOCK=${SSH_AUTH_SOCK:-$XDG_RUNTIME_DIR/ssh-agent.socket}
 export DOCKER_CONFIG=${DOCKER_CONFIG:-$XDG_CONFIG_HOME/docker}
 export MYSQL_HISTFILE=${MYSQL_HISTFILE:-$XDG_DATA_HOME/mysql_history}
+export PATH="$HOME/.local/bin:$PATH"
 . "$CARGO_HOME/env"

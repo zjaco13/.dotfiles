@@ -1,0 +1,12 @@
+ls
+bat
+bat 2A2B011AEAC8721CB6E43E7820BF2E67FDAAC271.gpg
+bat tmpvsc
+ls
+cd Desktop/
+ls
+cd ../Documents/
+ls
+z 4240
+zoxide
+ls

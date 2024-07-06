@@ -1,0 +1,5 @@
+2024/02/19-16:35:55.031 8606 Creating DB /home/zach/.config/discord/Local Storage/leveldb since it was missing.
+2024/02/19-16:35:55.058 8606 Reusing MANIFEST /home/zach/.config/discord/Local Storage/leveldb/MANIFEST-000001
+2024/02/19-16:39:43.437 8602 Level-0 table #5: started
+2024/02/19-16:39:43.461 8602 Level-0 table #5: 2917273 bytes OK
+2024/02/19-16:39:43.474 8602 Delete type=0 #3

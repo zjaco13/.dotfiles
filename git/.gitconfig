@@ -1,0 +1,9 @@
+[init]
+	defaultBranch = main
+[user]
+	email = jacobsonzacharym@gmail.com
+	name = Zach Jacobson
+[url "git@github.com:"]
+	insteadOf = https://github.com/
+[push]
+	autoSetupRemote = true

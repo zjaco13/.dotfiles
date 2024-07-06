@@ -1,0 +1,705 @@
+[2024-02-19 16:35:58.592] [34537] (engine.cpp:541): Created native Engine, time: Mon Feb 19 16:35:58 2024 EST, logPath: /home/zach/.config/discord/0.0.43/modules/discord_voice/, logLevel: 2
+[2024-02-19 16:35:58.593] [34537] (audio_processing_impl.cc:295): Injected APM submodules:
+Echo control factory: 0
+Echo detector: 0
+Capture analyzer: 0
+Capture post processor: 0
+Render pre processor: 0
+[2024-02-19 16:35:58.593] [34537] (audio_processing_impl.cc:304): Denormal disabler: supported
+[2024-02-19 16:35:58.593] [34537] (audio_processing_impl.cc:511): AudioProcessing::ApplyConfig: AudioProcessing::Config{ pipeline: { maximum_internal_processing_rate: 48000, multi_channel_render: 0, multi_channel_capture: 0 }, pre_amplifier: { enabled: 0, fixed_gain_factor: 1 },capture_level_adjustment: { enabled: 0, pre_gain_factor: 1, post_gain_factor: 1, analog_mic_gain_emulation: { enabled: 0, initial_level: 255 }}, high_pass_filter: { enabled: 1 }, echo_canceller: { enabled: 0, mobile_mode: 0, enforce_high_pass_filtering: 1 }, noise_suppression: { enabled: 0, level: Moderate }, transient_suppression: { enabled: 0 }, gain_controller1: { enabled: 0, mode: AdaptiveAnalog, target_level_dbfs: 3, compression_gain_db: 9, enable_limiter: 1, analog_gain_controller { enabled: 1, startup_min_volume: 0, clipped_level_min: 70, enable_digital_adaptive: 1, clipped_level_step: 15, clipped_ratio_threshold: 0.1, clipped_wait_frames: 300, clipping_predictor:  { enabled: 0, mode: 0, window_length: 5, reference_window_length: 5, reference_window_delay: 5, clipping_threshold: -1, crest_factor_margin: 3, use_predicted_step: 1 }}}, gain_controller2: { enabled: 0, fixed_digital: { gain_db: 0 }, adaptive_digital: { enabled: 0, dry_run: 0, headroom_db: 6, max_gain_db: 30, initial_gain_db: 8, vad_reset_period_ms: 1500, adjacent_speech_frames_threshold: 12, max_gain_change_db_per_second: 3, max_output_noise_level_dbfs: -50}}
+[2024-02-19 16:35:58.593] [34537] (audio_device_buffer.cc:66): AudioDeviceBuffer::ctor
+[2024-02-19 16:35:58.593] [34537] (audio_device_impl.cc:143): current platform is Linux
+[2024-02-19 16:35:58.593] [34537] (audio_device_impl.cc:162): CreatePlatformSpecificObjects
+[2024-02-19 16:35:58.593] [34537] (audio_device_impl.cc:991): PlatformAudioLayer
+[2024-02-19 16:35:58.593] [34537] (audio_device_impl.cc:298): PulseAudio support is enabled.
+[2024-02-19 16:35:58.593] [34537] (audio_device_impl.cc:303): Linux PulseAudio APIs will be utilized
+[2024-02-19 16:35:58.593] [34537] (audio_device_impl.cc:344): AttachAudioBuffer
+[2024-02-19 16:35:58.593] [34537] (audio_device_buffer.cc:183): SetRecordingSampleRate(0)
+[2024-02-19 16:35:58.593] [34537] (audio_device_buffer.cc:189): SetPlayoutSampleRate(0)
+[2024-02-19 16:35:58.593] [34537] (audio_device_buffer.cc:203): SetRecordingChannels(0)
+[2024-02-19 16:35:58.593] [34537] (audio_device_buffer.cc:209): SetPlayoutChannels(0)
+[2024-02-19 16:35:58.593] [34537] (audio_device_impl.cc:354): ActiveAudioLayer
+[2024-02-19 16:35:58.593] [34537] (audio_device_buffer.cc:66): AudioDeviceBuffer::ctor
+[2024-02-19 16:35:58.593] [34537] (audio_device_impl.cc:143): current platform is Linux
+[2024-02-19 16:35:58.593] [34537] (audio_device_impl.cc:162): CreatePlatformSpecificObjects
+[2024-02-19 16:35:58.593] [34537] (audio_device_impl.cc:991): PlatformAudioLayer
+[2024-02-19 16:35:58.593] [34537] (audio_device_impl.cc:298): PulseAudio support is enabled.
+[2024-02-19 16:35:58.593] [34537] (audio_device_impl.cc:303): Linux PulseAudio APIs will be utilized
+[2024-02-19 16:35:58.593] [34537] (audio_device_impl.cc:344): AttachAudioBuffer
+[2024-02-19 16:35:58.593] [34537] (audio_device_buffer.cc:183): SetRecordingSampleRate(0)
+[2024-02-19 16:35:58.593] [34537] (audio_device_buffer.cc:189): SetPlayoutSampleRate(0)
+[2024-02-19 16:35:58.593] [34537] (audio_device_buffer.cc:203): SetRecordingChannels(0)
+[2024-02-19 16:35:58.593] [34537] (audio_device_buffer.cc:209): SetPlayoutChannels(0)
+[2024-02-19 16:35:58.593] [34537] (audio_processing_impl.cc:295): Injected APM submodules:
+Echo control factory: 0
+Echo detector: 0
+Capture analyzer: 0
+Capture post processor: 0
+Render pre processor: 0
+[2024-02-19 16:35:58.593] [34537] (audio_processing_impl.cc:304): Denormal disabler: supported
+[2024-02-19 16:35:58.593] [34537] (audio_engine.cpp:400): Creating audio engine: standard
+[2024-02-19 16:35:58.593] [34537] (audio_device_impl.cc:364): Init
+[2024-02-19 16:35:58.597] [34537] (audio_device_impl.cc:364): Init
+[2024-02-19 16:35:58.599] [34537] (audio_coding.cpp:149): Using software Opus decoder
+[2024-02-19 16:35:58.599] [34537] (audio_coding.cpp:166): Using software Opus encoder
+[2024-02-19 16:35:58.599] [34537] (audio_device_impl.cc:895): RegisterAudioCallback
+[2024-02-19 16:35:58.599] [34537] (audio_device_impl.cc:547): SetMicrophoneVolume(100)
+[2024-02-19 16:35:58.599] [34537] (audio_mixer_manager_pulse_linux.cc:575): input device index has not been set
+[2024-02-19 16:35:58.599] [34537] (audio_device_impl.cc:895): RegisterAudioCallback
+[2024-02-19 16:35:58.599] [34537] (audio_engine.cpp:151): Setting audio input device: 'default'
+[2024-02-19 16:35:58.599] [34537] (audio_device_impl.cc:578): SetStereoRecording(1)
+[2024-02-19 16:35:58.599] [34537] (audio_device_buffer.cc:203): SetRecordingChannels(2)
+[2024-02-19 16:35:58.599] [34537] (audio_device_impl.cc:776): SetRecordingDevice(0)
+[2024-02-19 16:35:58.600] [34537] (audio_device_impl.cc:566): StereoRecordingIsAvailable
+[2024-02-19 16:35:58.600] [34537] (audio_device_impl.cc:573): output: 1
+[2024-02-19 16:35:58.600] [34537] (audio_device_impl.cc:578): SetStereoRecording(1)
+[2024-02-19 16:35:58.600] [34537] (audio_device_buffer.cc:203): SetRecordingChannels(2)
+[2024-02-19 16:35:58.600] [34537] (audio_mixer_manager_pulse_linux.cc:669): input device index has not been set
+[2024-02-19 16:35:58.600] [34537] (audio_device_impl.cc:547): SetMicrophoneVolume(255)
+[2024-02-19 16:35:58.600] [34537] (audio_mixer_manager_pulse_linux.cc:575): input device index has not been set
+[2024-02-19 16:35:58.600] [34537] (audio_engine.cpp:168): Setting audio output device: 'default'
+[2024-02-19 16:35:58.600] [34537] (audio_device_impl.cc:708): SetPlayoutDevice(0)
+[2024-02-19 16:35:58.600] [34537] (audio_device_impl.cc:612): StereoPlayoutIsAvailable
+[2024-02-19 16:35:58.600] [34537] (audio_device_impl.cc:619): output: 1
+[2024-02-19 16:35:58.600] [34537] (audio_device_impl.cc:624): SetStereoPlayout(1)
+[2024-02-19 16:35:58.600] [34537] (audio_device_buffer.cc:209): SetPlayoutChannels(2)
+[2024-02-19 16:35:58.600] [34537] (audio_device_impl.cc:911): BuiltInAECIsAvailable
+[2024-02-19 16:35:58.600] [34537] (audio_device_generic.cc:32): BuiltInAECIsAvailable: Not supported on this platform
+[2024-02-19 16:35:58.600] [34537] (audio_device_impl.cc:914): output: 0
+[2024-02-19 16:35:58.600] [34537] (audio_processing_impl.cc:511): AudioProcessing::ApplyConfig: AudioProcessing::Config{ pipeline: { maximum_internal_processing_rate: 48000, multi_channel_render: 0, multi_channel_capture: 0 }, pre_amplifier: { enabled: 0, fixed_gain_factor: 1 },capture_level_adjustment: { enabled: 0, pre_gain_factor: 1, post_gain_factor: 1, analog_mic_gain_emulation: { enabled: 0, initial_level: 255 }}, high_pass_filter: { enabled: 1 }, echo_canceller: { enabled: 1, mobile_mode: 0, enforce_high_pass_filtering: 1 }, noise_suppression: { enabled: 0, level: Moderate }, transient_suppression: { enabled: 0 }, gain_controller1: { enabled: 0, mode: AdaptiveAnalog, target_level_dbfs: 3, compression_gain_db: 9, enable_limiter: 1, analog_gain_controller { enabled: 1, startup_min_volume: 0, clipped_level_min: 70, enable_digital_adaptive: 1, clipped_level_step: 15, clipped_ratio_threshold: 0.1, clipped_wait_frames: 300, clipping_predictor:  { enabled: 0, mode: 0, window_length: 5, reference_window_length: 5, reference_window_delay: 5, clipping_threshold: -1, crest_factor_margin: 3, use_predicted_step: 1 }}}, gain_controller2: { enabled: 0, fixed_digital: { gain_db: 0 }, adaptive_digital: { enabled: 0, dry_run: 0, headroom_db: 6, max_gain_db: 30, initial_gain_db: 8, vad_reset_period_ms: 1500, adjacent_speech_frames_threshold: 12, max_gain_change_db_per_second: 3, max_output_noise_level_dbfs: -50}}
+[2024-02-19 16:35:58.600] [34537] (transparent_mode.cc:239): AEC3 Transparent Mode: Legacy
+[2024-02-19 16:35:58.600] [34537] (echo_canceller3.cc:793): AEC3 created with sample rate: 16000 Hz, num render channels: 1, num capture channels: 1
+[2024-02-19 16:35:58.600] [34537] (audio_processing_impl.cc:511): AudioProcessing::ApplyConfig: AudioProcessing::Config{ pipeline: { maximum_internal_processing_rate: 48000, multi_channel_render: 0, multi_channel_capture: 0 }, pre_amplifier: { enabled: 0, fixed_gain_factor: 1 },capture_level_adjustment: { enabled: 0, pre_gain_factor: 1, post_gain_factor: 1, analog_mic_gain_emulation: { enabled: 0, initial_level: 255 }}, high_pass_filter: { enabled: 1 }, echo_canceller: { enabled: 1, mobile_mode: 0, enforce_high_pass_filtering: 1 }, noise_suppression: { enabled: 0, level: Moderate }, transient_suppression: { enabled: 0 }, gain_controller1: { enabled: 1, mode: AdaptiveAnalog, target_level_dbfs: 3, compression_gain_db: 9, enable_limiter: 1, analog_gain_controller { enabled: 1, startup_min_volume: 0, clipped_level_min: 70, enable_digital_adaptive: 1, clipped_level_step: 15, clipped_ratio_threshold: 0.1, clipped_wait_frames: 300, clipping_predictor:  { enabled: 0, mode: 0, window_length: 5, reference_window_length: 5, reference_window_delay: 5, clipping_threshold: -1, crest_factor_margin: 3, use_predicted_step: 1 }}}, gain_controller2: { enabled: 0, fixed_digital: { gain_db: 0 }, adaptive_digital: { enabled: 0, dry_run: 0, headroom_db: 6, max_gain_db: 30, initial_gain_db: 8, vad_reset_period_ms: 1500, adjacent_speech_frames_threshold: 12, max_gain_change_db_per_second: 3, max_output_noise_level_dbfs: -50}}
+[2024-02-19 16:35:58.600] [34537] (clipping_predictor.cc:357): [agc] Clipping prediction disabled.
+[2024-02-19 16:35:58.600] [34537] (agc_manager_direct.cc:500): [agc] analog controller enabled: yes
+[2024-02-19 16:35:58.600] [34537] (agc_manager_direct.cc:503): [agc] Min mic level: 12 (overridden: no)
+[2024-02-19 16:35:58.600] [34537] (agc_manager_direct.cc:507): [agc] Startup min volume: 0
+[2024-02-19 16:35:58.600] [34537] (captured_audio_processor.cpp:115): SetNoiseCancellation: 0
+[2024-02-19 16:35:58.600] [34537] (audio_processing_impl.cc:511): AudioProcessing::ApplyConfig: AudioProcessing::Config{ pipeline: { maximum_internal_processing_rate: 48000, multi_channel_render: 0, multi_channel_capture: 0 }, pre_amplifier: { enabled: 0, fixed_gain_factor: 1 },capture_level_adjustment: { enabled: 0, pre_gain_factor: 1, post_gain_factor: 1, analog_mic_gain_emulation: { enabled: 0, initial_level: 255 }}, high_pass_filter: { enabled: 1 }, echo_canceller: { enabled: 1, mobile_mode: 0, enforce_high_pass_filtering: 1 }, noise_suppression: { enabled: 1, level: High }, transient_suppression: { enabled: 0 }, gain_controller1: { enabled: 1, mode: AdaptiveAnalog, target_level_dbfs: 3, compression_gain_db: 9, enable_limiter: 1, analog_gain_controller { enabled: 1, startup_min_volume: 0, clipped_level_min: 70, enable_digital_adaptive: 1, clipped_level_step: 15, clipped_ratio_threshold: 0.1, clipped_wait_frames: 300, clipping_predictor:  { enabled: 0, mode: 0, window_length: 5, reference_window_length: 5, reference_window_delay: 5, clipping_threshold: -1, crest_factor_margin: 3, use_predicted_step: 1 }}}, gain_controller2: { enabled: 0, fixed_digital: { gain_db: 0 }, adaptive_digital: { enabled: 0, dry_run: 0, headroom_db: 6, max_gain_db: 30, initial_gain_db: 8, vad_reset_period_ms: 1500, adjacent_speech_frames_threshold: 12, max_gain_change_db_per_second: 3, max_output_noise_level_dbfs: -50}}
+[2024-02-19 16:35:58.600] [34537] (field_trial.cc:141): Setting field trial string:WebRTC-Audio-NetEqDecisionLogicConfig/reinit_after_expands:100/
+[2024-02-19 16:35:58.603] [34537] (engine.cpp:248): *** OnDevicesChanged:
+[2024-02-19 16:35:58.603] [34537] (engine.cpp:249): * audioInput:
+[2024-02-19 16:35:58.603] [34537] (engine.cpp:252): - default: USB Audio Microphone ()
+[2024-02-19 16:35:58.603] [34537] (engine.cpp:252): - USB Audio Microphone ()
+[2024-02-19 16:35:58.603] [34537] (engine.cpp:252): - USB Audio Line Input ()
+[2024-02-19 16:35:58.603] [34537] (engine.cpp:254): * audioOutput:
+[2024-02-19 16:35:58.603] [34537] (engine.cpp:248): *** OnDevicesChanged:
+[2024-02-19 16:35:58.603] [34537] (engine.cpp:249): * audioInput:
+[2024-02-19 16:35:58.603] [34537] (engine.cpp:252): - default: USB Audio Microphone ()
+[2024-02-19 16:35:58.603] [34537] (engine.cpp:252): - USB Audio Microphone ()
+[2024-02-19 16:35:58.603] [34537] (engine.cpp:252): - USB Audio Line Input ()
+[2024-02-19 16:35:58.603] [34537] (engine.cpp:254): * audioOutput:
+[2024-02-19 16:35:58.603] [34537] (engine.cpp:257): - default: USB Audio Front Headphones ()
+[2024-02-19 16:35:58.603] [34537] (engine.cpp:257): - USB Audio S/PDIF Output ()
+[2024-02-19 16:35:58.603] [34537] (engine.cpp:257): - USB Audio Front Headphones ()
+[2024-02-19 16:35:58.603] [34537] (engine.cpp:257): - USB Audio Speakers ()
+[2024-02-19 16:35:58.603] [34537] (engine.cpp:257): - Navi 31 HDMI/DP Audio Digital Stereo (HDMI) ()
+[2024-02-19 16:35:58.666] [34537] (audio_engine.cpp:151): Setting audio input device: 'default'
+[2024-02-19 16:35:58.666] [34537] (audio_device_impl.cc:826): RecordingIsInitialized
+[2024-02-19 16:35:58.666] [34537] (audio_device_impl.cc:578): SetStereoRecording(1)
+[2024-02-19 16:35:58.666] [34537] (audio_device_buffer.cc:203): SetRecordingChannels(2)
+[2024-02-19 16:35:58.666] [34537] (audio_device_impl.cc:776): SetRecordingDevice(0)
+[2024-02-19 16:35:58.666] [34537] (audio_device_impl.cc:566): StereoRecordingIsAvailable
+[2024-02-19 16:35:58.666] [34537] (audio_device_impl.cc:573): output: 1
+[2024-02-19 16:35:58.666] [34537] (audio_device_impl.cc:578): SetStereoRecording(1)
+[2024-02-19 16:35:58.666] [34537] (audio_device_buffer.cc:203): SetRecordingChannels(2)
+[2024-02-19 16:35:58.666] [34537] (audio_mixer_manager_pulse_linux.cc:669): input device index has not been set
+[2024-02-19 16:35:58.666] [34537] (audio_device_impl.cc:547): SetMicrophoneVolume(255)
+[2024-02-19 16:35:58.666] [34537] (audio_mixer_manager_pulse_linux.cc:575): input device index has not been set
+[2024-02-19 16:35:58.666] [34537] (audio_engine.cpp:168): Setting audio output device: 'default'
+[2024-02-19 16:35:58.666] [34537] (audio_device_impl.cc:820): PlayoutIsInitialized
+[2024-02-19 16:35:58.666] [34537] (audio_device_impl.cc:708): SetPlayoutDevice(0)
+[2024-02-19 16:35:58.667] [34537] (audio_device_impl.cc:612): StereoPlayoutIsAvailable
+[2024-02-19 16:35:58.667] [34537] (audio_device_impl.cc:619): output: 1
+[2024-02-19 16:35:58.667] [34537] (audio_device_impl.cc:624): SetStereoPlayout(1)
+[2024-02-19 16:35:58.667] [34537] (audio_device_buffer.cc:209): SetPlayoutChannels(2)
+[2024-02-19 16:35:58.667] [34537] (audio_mixer_manager_pulse_linux.cc:669): input device index has not been set
+[2024-02-19 16:35:58.667] [34537] (audio_device_impl.cc:547): SetMicrophoneVolume(255)
+[2024-02-19 16:35:58.667] [34537] (audio_mixer_manager_pulse_linux.cc:575): input device index has not been set
+[2024-02-19 16:35:58.668] [34494] (discord.cpp:755): JS console: ["%c[default]","[BUILD INFO] Release Channel: stable, Build Number: 267220, Version Hash: 6b16dbc153c611ab1c8976bd334acfe6c5744d68"]
+[2024-02-19 16:35:58.706] [34494] (discord.cpp:755): JS console: ["%c[CloudSyncUtils]","CloudSync is not supported on this platform"]
+[2024-02-19 16:35:58.778] [34494] (discord.cpp:755): JS console: ["%c[default]","[NATIVE INFO] host 0.0.43, modules: discord_desktop_core: 1, discord_erlpack: 1, discord_spellcheck: 1, discord_utils: 1, discord_voice: 1, build: null"]
+[2024-02-19 16:35:58.812] [34537] (audio_engine.cpp:151): Setting audio input device: 'default'
+[2024-02-19 16:35:58.812] [34537] (audio_device_impl.cc:826): RecordingIsInitialized
+[2024-02-19 16:35:58.812] [34537] (audio_device_impl.cc:578): SetStereoRecording(1)
+[2024-02-19 16:35:58.812] [34537] (audio_device_buffer.cc:203): SetRecordingChannels(2)
+[2024-02-19 16:35:58.812] [34537] (audio_device_impl.cc:776): SetRecordingDevice(0)
+[2024-02-19 16:35:58.812] [34537] (audio_device_impl.cc:566): StereoRecordingIsAvailable
+[2024-02-19 16:35:58.812] [34537] (audio_device_impl.cc:573): output: 1
+[2024-02-19 16:35:58.812] [34537] (audio_device_impl.cc:578): SetStereoRecording(1)
+[2024-02-19 16:35:58.812] [34537] (audio_device_buffer.cc:203): SetRecordingChannels(2)
+[2024-02-19 16:35:58.812] [34537] (audio_mixer_manager_pulse_linux.cc:669): input device index has not been set
+[2024-02-19 16:35:58.812] [34537] (audio_device_impl.cc:547): SetMicrophoneVolume(255)
+[2024-02-19 16:35:58.812] [34537] (audio_mixer_manager_pulse_linux.cc:575): input device index has not been set
+[2024-02-19 16:35:58.812] [34537] (audio_engine.cpp:168): Setting audio output device: 'default'
+[2024-02-19 16:35:58.812] [34537] (audio_device_impl.cc:820): PlayoutIsInitialized
+[2024-02-19 16:35:58.812] [34537] (audio_device_impl.cc:708): SetPlayoutDevice(0)
+[2024-02-19 16:35:58.812] [34537] (audio_device_impl.cc:612): StereoPlayoutIsAvailable
+[2024-02-19 16:35:58.813] [34537] (audio_device_impl.cc:619): output: 1
+[2024-02-19 16:35:58.813] [34537] (audio_device_impl.cc:624): SetStereoPlayout(1)
+[2024-02-19 16:35:58.813] [34537] (audio_device_buffer.cc:209): SetPlayoutChannels(2)
+[2024-02-19 16:35:58.815] [34494] (discord.cpp:755): JS console: ["%c[Spellchecker]","sh is not a valid locale."]
+[2024-02-19 16:35:58.864] [34494] (discord.cpp:755): JS console: ["%c[Spellchecker]","Switching to en-US","(available)"]
+[2024-02-19 16:35:59.226] [34494] (discord.cpp:755): JS console: ["[DEPRECATED] Please use `subscribeWithSelector` middleware"]
+[2024-02-19 16:35:59.583] [34494] (discord.cpp:755): JS console: ["Initializing krisp module"]
+[2024-02-19 16:35:59.860] [34494] (discord.cpp:755): JS console: ["%c[RPCServer:WSS]","Starting on 6463"]
+[2024-02-19 16:35:59.866] [34494] (discord.cpp:755): JS console: ["%c[RPCServer:IPC]","Starting on /run/user/1000/discord-ipc-0"]
+[2024-02-19 16:36:00.664] [34494] (discord.cpp:755): JS console: ["%c[RPCServer:WSS]","Socket Message: 3","[object Object]"]
+[2024-02-19 16:36:00.666] [34494] (discord.cpp:755): JS console: ["%c[RPCServer:WSS]","Socket Emit: 3","[object Object]"]
+[2024-02-19 16:36:00.685] [34494] (discord.cpp:755): JS console: ["%c[LoginQRSocket]","[0ms] connecting to wss://remote-auth-gateway.discord.gg/?v=2"]
+[2024-02-19 16:36:00.785] [34494] (discord.cpp:755): JS console: ["%c[LoginQRSocket]","[101ms] got hello, auth timeout=130751ms"]
+[2024-02-19 16:36:00.830] [34494] (discord.cpp:755): JS console: ["%c[LoginQRSocket]","[146ms] connected, handshaking with fingerprint: _Px37mjFzcY0YanpOSixHZpmolLhsbfUJsHrHj3BrYg"]
+[2024-02-19 16:36:00.851] [34494] (discord.cpp:755): JS console: ["%c[LoginQRSocket]","[166ms] computed nonce proof"]
+[2024-02-19 16:36:00.868] [34494] (discord.cpp:755): JS console: ["%c[LoginQRSocket]","[184ms] handshake complete awaiting remote auth."]
+[2024-02-19 16:36:39.255] [34494] (discord.cpp:755): JS console: ["%c[LoginQRSocket]","[38568ms] remote auth handshake started, awaiting ticket/cancel."]
+[2024-02-19 16:36:41.401] [34494] (discord.cpp:755): JS console: ["%c[Flux]","Dispatching LOGIN"]
+[2024-02-19 16:36:41.406] [34494] (discord.cpp:755): JS console: ["%c[Flux]","Dispatching LOGIN_SUCCESS"]
+[2024-02-19 16:36:41.420] [34494] (discord.cpp:755): JS console: ["%c[Routing/Utils]","transitionTo - Transitioning to /app"]
+[2024-02-19 16:36:41.425] [34494] (discord.cpp:755): JS console: ["%c[GatewaySocket]","[CONNECT] wss://gateway.discord.gg, encoding: etf, version: 9, compression: zlib-stream"]
+[2024-02-19 16:36:41.428] [34494] (discord.cpp:755): JS console: ["%c[LoginQRSocket]","[40744ms] cleaning up"]
+[2024-02-19 16:36:41.504] [34494] (discord.cpp:755): JS console: ["%c[GatewaySocket]","[CONNECTED] wss://gateway.discord.gg/?encoding=etf&v=9&compress=zlib-stream in 78 ms"]
+[2024-02-19 16:36:41.922] [34494] (discord.cpp:755): JS console: ["%c[GatewaySocket]","[READY] took 497ms, as fdadb1fa4925da58e9cf176ca99eea97"]
+[2024-02-19 16:36:41.931] [34494] (discord.cpp:755): JS console: ["%c[Flux]","Dispatching CONNECTION_OPEN"]
+[2024-02-19 16:36:41.933] [34494] (discord.cpp:755): JS console: ["%c[DatabaseManager]","removing database (user: 604133940147519499, database: undefined)"]
+[2024-02-19 16:36:41.941] [34494] (discord.cpp:755): JS console: ["%c[NativeDispatchUtils]","Tried getting Dispatch instance before instantiated"]
+[2024-02-19 16:36:41.963] [34494] (discord.cpp:755): JS console: ["%c[GatewaySocket]","[READY_SUPPLEMENTAL] took 538ms"]
+[2024-02-19 16:36:44.287] [34494] (discord.cpp:755): JS console: ["%c[RunningGameStore]","games","[object Object]"]
+[2024-02-19 16:36:44.290] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:36:44.290] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:36:44.291] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:36:44.291] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:36:44.292] [34494] (discord.cpp:755): JS console: ["%c[NativeDispatchUtils]","Tried getting Dispatch instance before instantiated"]
+[2024-02-19 16:36:44.298] [34494] (discord.cpp:755): JS console: ["%c[AutoAnalytics]","Cannot identify game","Error: Error 1 when fetching info on 26192"]
+[2024-02-19 16:36:52.698] [35551] (region_latency_tester.cpp:72): Sending 5 latency test pings to region atlanta
+[2024-02-19 16:36:52.699] [35551] (region_latency_tester.cpp:72): Sending 5 latency test pings to region us-east
+[2024-02-19 16:36:52.699] [35551] (region_latency_tester.cpp:72): Sending 5 latency test pings to region us-central
+[2024-02-19 16:36:52.699] [35551] (region_latency_tester.cpp:72): Sending 5 latency test pings to region us-south
+[2024-02-19 16:36:52.699] [35551] (region_latency_tester.cpp:72): Sending 5 latency test pings to region newark
+[2024-02-19 16:36:52.739] [35551] (region_latency_tester.cpp:283): Average RTT for region atlanta is 11.5
+[2024-02-19 16:36:52.739] [35551] (region_latency_tester.cpp:283): Average RTT for region us-east is 30
+[2024-02-19 16:36:52.739] [35551] (region_latency_tester.cpp:283): Average RTT for region us-central is 28
+[2024-02-19 16:36:52.739] [35551] (region_latency_tester.cpp:283): Average RTT for region us-south is 35.75
+[2024-02-19 16:36:52.739] [35551] (region_latency_tester.cpp:283): Average RTT for region newark is 30.25
+[2024-02-19 16:36:54.290] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:36:54.291] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:36:54.291] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:36:54.291] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:36:58.991] [34494] (discord.cpp:755): JS console: ["%c[MessageActionCreators]","Fetching messages for 1209251775912087723 between undefined and undefined. jump={\"jumpType\":\"ANIMATED\"}"]
+[2024-02-19 16:36:59.146] [34494] (discord.cpp:755): JS console: ["%c[MessageActionCreators]","Fetched 2 messages for 1209251775912087723 isBefore:false isAfter:false"]
+[2024-02-19 16:36:59.148] [34494] (discord.cpp:755): JS console: ["%c[ChannelMessages]","loadComplete: resetting state for channelId=1209251775912087723, sending.length=0"]
+[2024-02-19 16:37:04.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:37:04.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:37:04.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:37:04.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:37:14.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:37:14.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:37:14.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:37:14.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:37:24.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:37:24.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:37:24.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:37:24.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:37:34.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:37:34.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:37:34.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:37:34.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:37:44.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:37:44.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:37:44.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:37:44.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:37:54.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:37:54.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:37:54.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:37:54.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:38:04.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:38:04.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:38:04.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:38:04.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:38:14.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:38:14.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:38:14.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:38:14.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:38:24.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:38:24.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:38:24.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:38:24.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:38:34.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:38:34.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:38:34.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:38:34.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:38:44.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:38:44.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:38:44.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:38:44.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:38:54.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:38:54.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:38:54.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:38:54.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:39:04.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:39:04.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:39:04.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:39:04.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:39:14.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:39:14.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:39:14.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:39:14.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:39:24.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:39:24.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:39:24.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:39:24.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:39:34.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:39:34.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:39:34.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:39:34.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:39:44.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:39:44.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:39:44.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:39:44.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:39:54.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:39:54.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:39:54.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:39:54.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:40:04.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:40:04.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:40:04.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:40:04.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:40:14.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:40:14.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:40:14.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:40:14.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:40:24.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:40:24.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:40:24.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:40:24.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:40:34.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:40:34.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:40:34.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:40:34.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:40:44.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:40:44.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:40:44.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:40:44.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:40:54.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:40:54.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:40:54.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:40:54.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:41:04.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:41:04.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:41:04.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:41:04.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:41:14.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:41:14.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:41:14.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:41:14.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:41:24.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:41:24.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:41:24.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:41:24.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:41:34.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:41:34.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:41:34.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:41:34.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:41:44.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:41:44.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:41:44.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:41:44.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:41:54.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:41:54.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:41:54.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:41:54.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:42:04.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:42:04.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:42:04.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:42:04.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:42:14.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:42:14.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:42:14.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:42:14.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:42:24.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:42:24.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:42:24.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:42:24.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:42:34.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:42:34.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:42:34.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:42:34.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:42:44.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:42:44.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:42:44.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:42:44.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:42:54.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:42:54.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:42:54.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:42:54.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:43:04.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:43:04.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:43:04.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:43:04.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:43:14.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:43:14.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:43:14.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:43:14.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:43:24.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:43:24.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:43:24.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:43:24.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:43:34.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:43:34.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:43:34.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:43:34.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:43:44.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:43:44.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:43:44.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:43:44.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:43:54.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:43:54.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:43:54.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:43:54.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:44:04.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:44:04.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:44:04.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:44:04.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:44:14.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:44:14.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:44:14.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:44:14.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:44:24.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:44:24.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:44:24.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:44:24.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:44:34.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:44:34.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:44:34.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:44:34.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:44:44.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:44:44.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:44:44.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:44:44.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:44:54.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:44:54.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:44:54.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:44:54.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:45:04.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:45:04.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:45:04.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:45:04.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:45:14.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:45:14.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:45:14.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:45:14.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:45:24.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:45:24.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:45:24.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:45:24.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:45:34.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:45:34.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:45:34.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:45:34.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:45:44.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:45:44.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:45:44.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:45:44.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:45:54.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:45:54.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:45:54.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:45:54.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:46:04.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:46:04.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:46:04.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:46:04.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:46:14.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:46:14.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:46:14.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:46:14.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:46:24.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:46:24.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:46:24.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:46:24.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:46:34.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:46:34.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:46:34.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:46:34.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:46:44.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:46:44.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:46:44.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:46:44.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:46:54.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:46:54.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:46:54.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:46:54.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:47:04.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:47:04.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:47:04.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:47:04.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:47:14.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:47:14.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:47:14.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:47:14.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:47:24.290] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:47:24.291] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:47:24.291] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:47:24.291] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:47:34.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:47:34.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:47:34.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:47:34.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:47:44.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:47:44.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:47:44.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:47:44.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:47:54.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:47:54.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:47:54.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:47:54.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:48:04.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:48:04.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:48:04.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:48:04.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:48:14.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:48:14.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:48:14.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:48:14.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:48:24.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:48:24.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:48:24.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:48:24.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:48:34.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:48:34.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:48:34.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:48:34.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:48:44.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:48:44.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:48:44.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:48:44.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:48:54.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:48:54.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:48:54.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:48:54.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:49:04.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:49:04.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:49:04.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:49:04.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:49:14.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:49:14.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:49:14.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:49:14.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:49:24.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:49:24.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:49:24.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:49:24.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:49:34.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:49:34.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:49:34.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:49:34.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:49:44.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:49:44.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:49:44.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:49:44.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:49:54.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:49:54.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:49:54.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:49:54.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:50:04.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:50:04.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:50:04.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:50:04.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:50:14.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:50:14.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:50:14.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:50:14.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:50:24.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:50:24.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:50:24.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:50:24.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:50:34.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:50:34.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:50:34.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:50:34.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:50:44.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:50:44.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:50:44.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:50:44.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:50:54.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:50:54.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:50:54.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:50:54.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:51:04.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:51:04.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:51:04.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:51:04.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:51:14.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:51:14.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:51:14.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:51:14.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:51:24.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:51:24.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:51:24.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:51:24.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:51:34.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:51:34.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:51:34.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:51:34.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:51:44.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:51:44.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:51:44.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:51:44.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:51:54.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:51:54.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:51:54.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:51:54.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:52:04.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:52:04.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:52:04.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:52:04.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:52:14.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:52:14.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:52:14.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:52:14.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:52:24.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:52:24.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:52:24.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:52:24.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:52:34.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:52:34.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:52:34.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:52:34.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:52:44.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:52:44.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:52:44.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:52:44.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:52:54.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:52:54.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:52:54.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:52:54.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:53:04.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:53:04.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:53:04.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:53:04.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:53:14.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:53:14.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:53:14.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:53:14.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:53:24.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:53:24.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:53:24.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:53:24.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:53:34.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:53:34.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:53:34.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:53:34.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:53:44.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:53:44.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:53:44.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:53:44.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:53:54.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:53:54.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:53:54.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:53:54.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:54:04.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:54:04.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:54:04.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:54:04.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:54:14.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:54:14.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:54:14.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:54:14.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:54:24.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:54:24.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:54:24.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:54:24.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:54:34.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:54:34.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:54:34.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:54:34.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:54:44.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:54:44.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:54:44.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:54:44.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:54:54.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:54:54.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:54:54.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:54:54.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:55:04.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:55:04.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:55:04.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:55:04.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:55:14.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:55:14.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:55:14.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:55:14.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:55:24.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:55:24.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:55:24.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:55:24.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:55:34.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:55:34.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:55:34.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:55:34.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:55:44.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:55:44.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:55:44.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:55:44.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:55:54.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:55:54.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:55:54.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:55:54.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:56:04.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:56:04.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:56:04.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:56:04.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:56:14.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:56:14.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:56:14.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:56:14.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:56:24.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:56:24.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:56:24.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:56:24.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:56:34.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:56:34.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:56:34.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:56:34.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:56:44.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:56:44.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:56:44.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:56:44.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:56:54.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:56:54.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:56:54.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:56:54.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:57:04.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:57:04.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:57:04.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:57:04.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:57:14.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:57:14.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:57:14.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:57:14.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:57:24.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:57:24.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:57:24.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:57:24.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:57:34.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:57:34.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:57:34.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:57:34.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:57:44.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:57:44.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:57:44.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:57:44.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:57:54.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:57:54.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:57:54.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:57:54.294] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:58:04.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:58:04.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:58:04.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:58:04.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:58:14.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:58:14.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:58:14.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:58:14.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:58:24.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:58:24.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:58:24.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]
+[2024-02-19 16:58:24.293] [34494] (discord.cpp:755): JS console: ["%c[OverlayUsageStatsManager]","ScreenTypeAnalytics: Unknown screen type: 1553971136","1553971136"]

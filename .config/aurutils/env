@@ -1,0 +1,4 @@
+AURDEST=/home/zach/bin/custompkgs
+AUR_PACMAN_AUTH=sudo --askpass
+AUR_PAGER=yazi
+AUR_REPO=custom

@@ -1,10 +1,10 @@
 lastupdatecheck: 0
 recentrepos:
-    - /home/zach/.dotfiles
     - /home/zach/.config/nvim
-    - /home/zach/Documents/4240/4240P3
+    - /home/zach/.dotfiles/nvim/.config/nvim
+    - /home/zach/.dotfiles
 startuppopupversion: 5
-lastversion: 0.43.1
+lastversion: 0.44.1
 customcommandshistory: []
 hidecommandlog: false
 ignorewhitespaceindiffview: false

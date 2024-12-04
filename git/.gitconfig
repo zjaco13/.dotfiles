@@ -3,6 +3,7 @@
 [user]
 	email = jacobsonzacharym@gmail.com
 	name = Zach Jacobson
+	signingkey = 9B5CADE64C5D2334
 [url "git@github.com:"]
 	insteadOf = https://github.com/
 [push]

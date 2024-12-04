@@ -27,7 +27,24 @@
         "all-outputs": true,
         "active-only": false,
         "on-click": "activate",
+        "format": "{icon}",
         "persistent-workspaces": {
+            "1": [],
+            "2": [],
+            "3": [],
+            "4": []
+        },
+        "format-icons": {
+            "1": "一",
+            "2": "二",
+            "3": "三",
+            "4": "四",
+            "5": "五",
+            "6": "六",
+            "7": "七",
+            "8": "八",
+            "9": "九",
+            "10": "十",
         }
     },
 
@@ -35,12 +52,14 @@
         "format": "  {}",
         "separate-outputs": true,
         "rewrite": {
-            "zach@nilfgaard:(.*)": "$1 ",
+            "(.*) — foot": "$1 ",
+            "(.*) foot": "foot ",
             "(.*) — Mozilla Firefox": "$1 󰈹",
             "(.*)Mozilla Firefox": "Firefox 󰈹",
             "(.*) - Visual Studio Code": "$1 󰨞",
             "(.*)Visual Studio Code": "Code 󰨞",
-            "(.*) — Dolphin": "$1 󰉋",
+            "(.*) — Yazi": "$1 󰉋",
+            "(.*)Yazi": "Yazi 󰉋",
             "(.*)Spotify": "Spotify 󰓇",
             "(.*)Steam": "Steam 󰓓"
         },

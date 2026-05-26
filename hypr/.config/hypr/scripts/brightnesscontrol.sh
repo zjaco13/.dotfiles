@@ -14,32 +14,25 @@ EOF
 }
 
 function send_notification {
-    brightness=`brightnessctl info | grep -oP "(?<=\()\d+(?=%)" | cat`
-    brightinfo=$(brightnessctl info | awk -F "'" '/Device/ {print $2}')
-    angle="$(((($brightness + 2) / 5) * 5))"
-    ico="~/.config/dunst/icons/vol/vol-${angle}.svg"
-    bar=$(seq -s "." $(($brightness / 15)) | sed 's/[0-9]//g')
-    dunstify "t2" -i $ico -a "$brightness$bar" "$brightinfo" -r 91190 -t 800
+    brightness=$(ddcutil getvcp 10 --display 1 | awk '{print $9}' | tr -d ",")
+    brightinfo="External Monitor Brightness"
+    dunstify "Brightness" -a "$brightness%" "$brightinfo" -r 91190 -t 800
 }
 
-function get_brightness {
-    brightnessctl -m | grep -o '[0-9]\+%' | head -c-2
+function adjust_brightness {
+    local delta=$1
+    current_brightness=$(ddcutil getvcp 10 --display 1 | awk '{print $9}' | tr -d ",")
+    new_brightness=$((current_brightness + delta))
+    if (( new_brightness > 100 )); then new_brightness=100; fi
+    if (( new_brightness < 0 )); then new_brightness=0; fi
+    for display in $(ddcutil detect | grep 'Display' | awk '{print $2}'); do
+        ddcutil setvcp 10 $new_brightness --display $display
+    done
+    send_notification
 }
 
 case $1 in
-i)  # increase the backlight by 5%
-    brightnessctl set +5%
-    send_notification ;;
-d)  # decrease the backlight by 5%
-    if [[ $(get_brightness) -lt 5 ]] ; then
-        # avoid 0% brightness
-        brightnessctl set 1%
-    else
-        # decrease the backlight by 5%
-        brightnessctl set 5%-
-    fi
-    send_notification ;;
-*)  # print error
-    print_error ;;
+i) adjust_brightness 10 ;;   # Increase by 10%
+d) adjust_brightness -10 ;;  # Decrease by 10%
+*) print_error ;;
 esac
-

@@ -37,13 +37,32 @@ tooltip {
 #workspaces button.active {
     background: @wb-act-bg;
     color: @wb-act-fg;
+
     margin-left: 4px;
+    margin-right: 4px;
     padding-left: 17px;
     padding-right: 17px;
-    margin-right: 4px;
+
+
     animation: gradient_f 20s ease-in infinite;
     transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
 }
+
+#workspaces button:not(.active).visible {
+    background: transparent;
+    color: @wb-act-bg;
+
+    margin-left: 4px;
+    margin-right: 4px;
+    padding-left: 17px;
+    padding-right: 17px;
+
+    border: 2px solid @wb-act-bg;
+    border-radius: 999px;
+
+    transition: all 0.3s cubic-bezier(.55,-0.68,.48,1.682);
+}
+
 
 #workspaces button:hover {
     background: @wb-hvr-bg;
@@ -117,6 +136,7 @@ tooltip {
 #custom-sl_end,
 #custom-sr_end,
 #custom-rl_end,
+#custom-vpn,
 #custom-rr_end {
     color: @main-fg;
     background: @main-bg;
@@ -125,7 +145,6 @@ tooltip {
     padding-left: 6px;
     padding-right: 6px;
 }
-
 #workspaces,
 #taskbar {
     padding: 0px;

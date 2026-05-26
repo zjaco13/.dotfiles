@@ -58,7 +58,7 @@ Wall_Set()
         xtrans="grow"
     fi
 
-    swww img "$wallSet" \
+    awww img "$wallSet" \
     --transition-bezier .43,1.19,1,.4 \
     --transition-type "$xtrans" \
     --transition-duration 0.7 \
@@ -72,9 +72,9 @@ Wall_Set()
 
 ScrDir=`dirname $(realpath $0)`
 source $ScrDir/globalcontrol.sh
-wallSet="${XDG_CONFIG_HOME:-$HOME/.config}/swww/wall.set"
-wallBlr="${XDG_CONFIG_HOME:-$HOME/.config}/swww/wall.blur"
-wallRfi="${XDG_CONFIG_HOME:-$HOME/.config}/swww/wall.rofi"
+wallSet="${XDG_CONFIG_HOME:-$HOME/.config}/awww/wall.set"
+wallBlr="${XDG_CONFIG_HOME:-$HOME/.config}/awww/wall.blur"
+wallRfi="${XDG_CONFIG_HOME:-$HOME/.config}/awww/wall.rofi"
 ctlLine=$(grep '^1|' ${ThemeCtl})
 
 if [ `echo $ctlLine | wc -l` -ne "1" ] ; then
@@ -89,8 +89,8 @@ wallPath=$(dirname "$fullPath")
 mapfile -d '' Wallist < <(find ${wallPath} -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" \) -print0 | sort -z)
 
 if [ ! -f "$fullPath" ] ; then
-    if [ -d "${XDG_CONFIG_HOME:-$HOME/.config}/swww/$curTheme" ] ; then
-        wallPath="${XDG_CONFIG_HOME:-$HOME/.config}/swww/$curTheme"
+    if [ -d "${XDG_CONFIG_HOME:-$HOME/.config}/awww/$curTheme" ] ; then
+        wallPath="${XDG_CONFIG_HOME:-$HOME/.config}/awww/$curTheme"
         mapfile -d '' Wallist < <(find ${wallPath} -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" \) -print0 | sort -z)
         fullPath="${Wallist[0]}"
     else
@@ -126,9 +126,9 @@ done
 
 # check swww daemon and set wall
 
-swww query
+awww query
 if [ $? -eq 1 ] ; then
-    swww-daemon
+    awww-daemon
 fi
 
 Wall_Set

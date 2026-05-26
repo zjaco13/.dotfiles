@@ -25,5 +25,6 @@ source <(argc --argc-completions zsh $argc_scripts)
 export EDITOR='nvim'
 
 
+source <(fzf --zsh)
 eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"
